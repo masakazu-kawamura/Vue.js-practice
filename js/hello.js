@@ -5,34 +5,67 @@ let app = new Vue({
     url: "https://wings.msn.to/",
     flag: true,
     email: "Y-Suzuki@example.com",
-    current: new Date().toLocaleString()
+    current: new Date().toLocaleString(),
+    author: {
+      name: "山田"
+    },
+    name: "",
+    upperName: ""
   },
+  // created: function() {
+  //   this.delayFunc = _.debounce(this.getUpper, 2000);
+  // },
+  // watch: {
+  //   name: function(newValue, oldValue) {
+  //     this.delayFunc();
+  //   }
+  // },
   computed: {
-    localEmail: function() {
-      return this.email.split("@")[0].toLowerCase();
-    },
-    randomc: function() {
-      return Math.random();
+    getUpper: function() {
+      this.upperName = this.name.toUpperCase();
     }
-  },
-  methods: {
-    localEmail: function() {
-      return this.email.split("@")[0].toLowerCase();
-    },
-    onclick: function() {
-      this.current = new Date().toLocaleString();
-    },
-    randomm: function() {
-      return Math.random();
-    }
-  },
-  created: function() {
-    let that = this;
-    // 1000msスパンでcurrentプロパティを更新
-    this.timer = setInterval(() => {
-      that.current = new Date();
-    }, 1000);
-  },
+  }
+  // computed: {
+  //   localEmail: function() {
+  //     return this.email.split("@")[0].toLowerCase();
+  //   },
+  //   randomc: function() {
+  //     return Math.random();
+  //   }
+  // },
+  // methods: {
+  //   localEmail: function() {
+  //     return this.email.split("@")[0].toLowerCase();
+  //   },
+  //   onclick: function() {
+  //     this.current = new Date().toLocaleString();
+  //   },
+  //   randomm: function() {
+  //     return Math.random();
+  //   }
+  // },
+  // created: function() {
+  //   let that = this;
+  // 1000msスパンでcurrentプロパティを更新
+  // this.timer = setInterval(() => {
+  // that.author.name = "Y.YAMADA";
+  // that.author.company = "WINGプロジェクト";
+  // Vue.assign({}, that.author, {
+  //   company: "WINGSプロジェクト",
+  //   sex: "male",
+  //   age: 18
+  // });
+
+  // that.current = new Date();
+  // }, 3000);
+  // },
+  // mounted: function() {
+  //   Vue.set(this.author, "company", "WINGSプロジェクト");
+  //   let that = this;
+  //   this.$nextTick().then(() => {
+  //     console.log(this.$el.textContent.includes(that.author.company));
+  //   });
+  // }
   // beforeCreate: function() {
   //   console.log("beforeCreate");
   // },
@@ -54,9 +87,9 @@ let app = new Vue({
   // updated: function() {
   //   console.log("updated");
   // },
-  beforeDestroy: function() {
-    clearInterval(this.timer);
-  }
+  // beforeDestroy: function() {
+  //   clearInterval(this.timer);
+  // }
   // destroyed: function() {
   //   console.log("destroyed");
   // }
