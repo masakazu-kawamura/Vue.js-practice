@@ -9,22 +9,30 @@
     <div id="app">
       <!-- <p>{{ message }}</p> -->
       <!-- <p v-text="message"></p> -->
-      <p v-pre="message">{{ message }}</p>
+      <!-- <p v-pre="message">{{ message }}</p>
       <a v-bind:href="url">WINGSプロジェクト</a>
       <input type="button" value="クリック" 　:disabled="flag" />
-      <p>{{ email.split('@')[0].toLowerCase() }}</p>
+      <p>{{ email.split('@')[0].toLowerCase() }}</p> -->
       <!-- <p>{{ localEmail }}</p> -->
-      <p>{{ localEmail() }}</p>
+      <!-- <p>{{ localEmail() }}</p>
       <form>
         <input type="button" value="クリック" v-on:click="onclick" />
-      </form>
+      </form> -->
       <!-- <div>算出プロパティ: {{ randomc }}</div>
       <div>メソッド: {{ randomm() }}</div>
       <div>現在日時: {{ current }}</div>
       ライフサイクルフック -->
-      <p>現在時刻: {{ current.toLocaleString() }}</p>
+      <!-- <p>現在時刻: {{ current.toLocaleString() }}</p> -->
+      <!-- <p>著者情報: {{ author.name }} ({{ author.company }})</p> -->
+      <!-- <p>性別: {{ author.sex }} ({{ author.age }})</p> -->
+      <label
+        >名前:
+        <input type="text" v-model="name" />
+      </label>
+      <p>入力された値: {{ upperName }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
     <script src="js/hello.js"></script>
   </body>
 </html>
