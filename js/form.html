@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <form>
+        <label for="name">氏名:</label>
+        <input type="text" id="name" v-model="myName" />
+      </form>
+      <div>こんにちは、{{ myName }}　さん!</div> -->
+      <!-- <form>
+        <label for="dog">いぬ</label>
+        <input type="radio" id="dog" value="いぬ" v-model="pet" /><br />
+        <label for="cat">ねこ</label>
+        <input type="radio" id="cat" value="ねこ" v-model="pet" /><br />
+        <label for="その他">その他</label>
+        <input type="radio" id="other" value="その他" v-model="pet" /><br />
+        <p>ペット: {{ pet }}</p>
+      </form>
+      <form>
+        <label for="agree">同意する</label>
+        <input type="checkbox" v-model="agree" id="agree" />
+      </form>
+      <div>回答: {{ agree }}</div> -->
+      <!-- <form>
+        <div>お使いのOSは？</div>
+        <label for="windows">Windows</label>
+        <input type="checkbox" id="windows" value="Windows" v-model="os" />
+        <label for="linux">linux</label>
+        <input type="checkbox" id="linux" value="Linux" v-model="os" />
+        <label for="mac">macOS</label>
+        <input type="checkbox" id="mac" value="macOS" v-model="os" />
+      </form> -->
+      <!-- <form>
+        <label for="os">お使いのOSは？</label><br />
+        <select id="os" v-model="os">
+          <option value="">OSを選択してください</option>
+          <option>Windows</option>
+          <option>Linux</option>
+          <option>macOS</option>
+        </select>
+      </form>
+      <p>回答:{{ os }}</p> -->
+      <!-- <form>
+        <input ref="upfile" type="file" @chenge="onchange" />
+      </form>
+      <div>{{ message }}</div> -->
+      <!-- <form>
+        <label for="temperature">サウナの温度：</label>
+        <input
+          type="text"
+          id="temperature"
+          v-model.number="temperature"
+          @change="onchange"
+        />
+      </form> -->
+      <form>
+        <!-- チェックボックスをshowに紐付け -->
+        <label for="show">表示/非表示</label>
+        <input type="checkbox" id="show" v-model="show" />
+      </form>
+      <!-- showプロパティの値に応じて、パネルの表示/非表示を切り替え -->
+      <!-- <div id="panel" v-if="show">
+        <h3>RSSフィードについて</h3>
+        <div>WINGSでは,弊社執筆の書籍/雑誌/Web記事の...</div>
+      </div>
+      <div v-else>現在、非表示状態です</div> -->
+      <!-- <form>
+        <label for="holiday">祝日:</label><br />
+        <select id="holiday" v-model="holiday">
+          <option value="">祝日を選択してください。</option>
+          <option value="new">元旦</option>
+          <option value="child">子供の日</option>
+          <option value="culture">文化の日</option>
+          <option value="labor">勤労感謝の日</option>
+        </select>
+      </form>
+      <div v-if="holiday==='new'">1月1日</div>
+      <div v-else-if="holiday==='child'">1月2日</div>
+      <div v-else-if="holiday==='culture'">1月3日</div>
+      <div v-else-if="holiday==='labor'">1月4日</div>
+      <div v-else>なにも選択されていません。</div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>
