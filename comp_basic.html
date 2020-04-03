@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- my-helloコンポーネントの呼び出し -->
+      <!-- <my-hello>鈴木</my-hello> -->
+      <!-- <my-counter init="0"></my-counter>
+      <my-hello title="input" my-attr="mytext" class="sub"></my-hello> -->
+      <!-- <p>現在値: {{current}}</p> -->
+      <!-- 増分値の異なるボタンを配置 -->
+      <!-- <my-counter step="1" @plus="onplus"></my-counter>
+      <my-counter step="2" @plus="onplus"></my-counter>
+      <my-counter step="-1" @plus="onplus"></my-counter> -->
+      <!-- <p>親：｛{ message }}</p>
+      <my-child ref="child"></my-child> -->
+      <my-slot>
+        <template #header>
+          <h3>ようこそVue.js</h3>
+        </template>
+
+        <p>一緒に勉強しましょう。</p>
+
+        <template>
+          <span>Written by WINGSプロジェクト</span>
+        </template>
+
+        <p>質問は掲示板へどうぞ。</p>
+      </my-slot>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="comp_basic.js"></script>
+  </body>
+</html>
