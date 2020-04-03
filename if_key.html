@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <fieldset>
+        <legend>支払方法</legend>
+        クレジットカード:
+        <input type="radio" name="pay" value="credit" v-model="pay" />
+        銀行振込:
+        <input type="radio" name="pay" value="bank" v-model="pay" />
+        <hr /> -->
+      <!-- 支払方法に応じて、入力ボックスを切り替え -->
+      <!-- <div v-if="pay==='credit'">
+          カード番号:
+          <input type="text" key="credit" />
+        </div>
+        <div v-else-if="pay==='bank'">
+          口座番号:
+          <input type="text" key="bank" />
+        </div>
+      </fieldset>
+      <span v-for="i in 5">{{ (i-1) * 2}}</span> -->
+      <!-- <template v-for="s in songs">
+        <header>{{ s.title }}</header>
+        <div>{{ s.lyrics }}</div>
+        <footer>{{ s.composer }}</footer>
+      </template> -->
+      <!-- <form>
+        <input type="button" value="変更" @click="onclick" />
+      </form>
+      <ul>
+        <li v-for="item in list">{{ item }}</li>
+      </ul> -->
+      <!-- <form>
+        <label for="memo">メモ:</label>
+        <input type="text" id="memo" v-bind="attrs" />
+      </form> -->
+      <!-- <select v-model="attr">
+        <option value="height">高さ</option>
+        <option value="width">幅</option>
+      </select>
+      <input type="text" size="5" v-model="size" /><br />
+      <img src="https://wings.msn.to/image/wings.jpg" :[attr]="size" /> -->
+      <!-- <div :style="[color, size]">皆さん、こんにちは</div> -->
+      <!-- <div id="main" @contextmenu.prevent>
+        この領域では、コンテキストメニューは表示されません
+      </!-->
+      <!-- <form @submit="onsubmit">
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" />
+        <input type="submit" value="送信" />
+      </!-->
+      <!-- <div id="parent" @click="onParentClick">
+        親要素
+        <div id="my" @click.self="onMyClick">
+          現在要素
+          <div id="child" @click="onChildClick">
+            子要素
+          </div>
+        </div>
+      </div> -->
+      <!-- <div id="parent" @click="onParentClick">
+        親要素
+        <div id="my" @click.self.stop="onMyClick">
+          現在要素
+          <div id="child" @click="onChildClick">
+            子要素
+          </div>
+        </div>
+      </div> -->
+      <!-- <form>
+        <label for="name">氏名:</label>
+        <input type="text" id="name" @keyup.esc="clear" v-model="name" />
+      </form> -->
+      <!-- <form>
+        <label for="name">氏名:</label>
+        <input type="text" id="name" @keyup.alt.81="help" v-model="name" />
+      </form> -->
+      <div
+        id="main"
+        @click.left="onleftclick"
+        @click.right.prevent="onrightclick"
+      >
+        ボタンの右クリックでコンテキストメニューを表示します。
+      </div>
+      <!-- コンテキストメニューの定義 -->
+      <ul class="cxt" v-bind:style="pos" v-show="show">
+        <li><a href="https:wings.msn.to/index.php/-/A08/">ヘルプ</a></li>
+        <li><a href="https:wings.msn.to/index.php/-/A08/">ヘルプ</a></li>
+        <li><a href="https:wings.msn.to/index.php/-/A08/">ヘルプ</a></li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="js/if_key.js"></script>
+  </body>
+</html>
